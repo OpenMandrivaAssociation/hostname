@@ -9,6 +9,7 @@ Source0:	http://ftp.de.debian.org/debian/pool/main/h/hostname/hostname_%{version
 
 # Initial changes
 Patch1:		hostname-rh.patch
+BuildRequires:	pkgconfig(libtirpc)
 
 %description
 This package provides commands which can be used to display the system's
