@@ -1,6 +1,6 @@
 Summary:	Utility to set/show the host name or domain name
 Name:		hostname
-Version:	3.16
+Version:	3.17
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Networking
@@ -16,8 +16,8 @@ This package provides commands which can be used to display the system's
 DNS name, and to display or set its hostname or NIS domain name.
 
 %prep
-%setup -q
-%patch1 -p1 -b .rh
+%setup -qn %{name}
+%apply_patches
 
 %build
 %setup_compile_flags

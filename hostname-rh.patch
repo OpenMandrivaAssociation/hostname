@@ -1,10 +1,11 @@
-diff -up hostname/Makefile.rh hostname/Makefile
---- hostname/Makefile.rh	2013-11-04 10:12:59.670379153 +0100
-+++ hostname/Makefile	2013-11-04 10:15:04.957314495 +0100
+diff --git a/Makefile b/Makefile
+index c473641..264d2a2 100644
+--- a/Makefile
++++ b/Makefile
 @@ -10,21 +10,17 @@ OBJS=hostname.o
  
  hostname: $(OBJS)
- 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS) -lnsl
+ 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
 -	ln -fs hostname dnsdomainname
 -	ln -fs hostname domainname
 -	ln -fs hostname ypdomainname
@@ -25,10 +26,11 @@ diff -up hostname/Makefile.rh hostname/Makefile
  	ln -fs hostname ${BASEDIR}$(BINDIR)/dnsdomainname
  	ln -fs hostname ${BASEDIR}$(BINDIR)/domainname
  	ln -fs hostname ${BASEDIR}$(BINDIR)/nisdomainname
-diff -up hostname/hostname.1.rh hostname/hostname.1
---- hostname/hostname.1.rh	2013-11-03 15:24:23.000000000 +0100
-+++ hostname/hostname.1	2013-11-04 10:12:59.670379153 +0100
-@@ -80,6 +80,28 @@ complete FQDN of the system is returned
+diff --git a/hostname.1 b/hostname.1
+index 5e345e7..86c7a3f 100644
+--- a/hostname.1
++++ b/hostname.1
+@@ -80,6 +80,28 @@ complete FQDN of the system is returned with
  .B "THE FQDN"
  below).
  
