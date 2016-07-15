@@ -1,6 +1,6 @@
 Summary:	Utility to set/show the host name or domain name
 Name:		hostname
-Version:	3.17
+Version:	3.18
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Networking
