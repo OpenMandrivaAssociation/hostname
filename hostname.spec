@@ -1,7 +1,7 @@
 Summary:	Utility to set/show the host name or domain name
 Name:		hostname
 Version:	3.23
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Configuration/Networking
 URL:		http://packages.qa.debian.org/h/hostname.html
@@ -21,18 +21,18 @@ DNS name, and to display or set its hostname or NIS domain name.
 %autosetup -n %{name} -p1
 
 %build
-%setup_compile_flags
+%set_build_flags
 %make_build
 
 %install
-make BASEDIR=%{buildroot} install
-mkdir -p %{buildroot}%{_bindir}
+make BASEDIR=%{buildroot} BINDIR=%{_bindir} install
+mkdir -p %{buildroot}/bin
 for i in dnsdomainname domainname hostname nisdomainname ypdomainname; do
-    ln -sf /bin/$i %{buildroot}%{_bindir}/$i
+    ln -sf %{_bindir}/$i %{buildroot}/bin/$i
 done
 
 %files
 %doc COPYRIGHT
 /bin/*
 %{_bindir}/*
-%{_mandir}/man1/*
+%doc %{_mandir}/man1/*
