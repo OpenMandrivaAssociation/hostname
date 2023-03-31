@@ -6,7 +6,7 @@
 Summary:	Utility to set/show the host name or domain name
 Name:		hostname
 Version:	3.23
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		System/Configuration/Networking
 URL:		http://packages.qa.debian.org/h/hostname.html
