@@ -9,7 +9,7 @@ Version:	3.23
 Release:	5
 License:	GPLv2+
 Group:		System/Configuration/Networking
-URL:		http://packages.qa.debian.org/h/hostname.html
+URL:		https://packages.qa.debian.org/h/hostname.html
 Source0:	http://ftp.de.debian.org/debian/pool/main/h/hostname/hostname_%{version}.tar.gz
 
 # Initial changes
