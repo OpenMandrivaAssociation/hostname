@@ -14,6 +14,7 @@ Source0:	http://ftp.de.debian.org/debian/pool/main/h/hostname/hostname_%{version
 
 # Initial changes
 Patch1:		hostname-rh.patch
+BuildRequires:	make
 BuildRequires:	pkgconfig(libtirpc)
 # net-tools 1.60 provided its own hostname
 Conflicts:	net-tools < 2.0
