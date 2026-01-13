@@ -1,16 +1,11 @@
-%ifnarch %{riscv}
-# (tpg) optimize it a bit
-%global optflags %{optflags} -Oz --rtlib=compiler-rt
-%endif
-
 Summary:	Utility to set/show the host name or domain name
 Name:		hostname
-Version:	3.23
-Release:	5
+Version:	3.25
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Networking
 URL:		https://packages.qa.debian.org/h/hostname.html
-Source0:	http://ftp.de.debian.org/debian/pool/main/h/hostname/hostname_%{version}.tar.gz
+Source0:	https://salsa.debian.org/meskes/hostname/-/archive/debian/%{version}/hostname-debian-%{version}.tar.bz2
 
 # Initial changes
 Patch1:		hostname-rh.patch
@@ -24,14 +19,14 @@ This package provides commands which can be used to display the system's
 DNS name, and to display or set its hostname or NIS domain name.
 
 %prep
-%autosetup -n %{name} -p1
+%autosetup -n %{name}-debian-%{version} -p1
 
 %build
 %set_build_flags
 %make_build
 
 %install
-make BASEDIR=%{buildroot} BINDIR=%{_bindir} install
+%make_install
 
 %files
 %doc COPYRIGHT
